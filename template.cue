@@ -33,10 +33,10 @@ template: {
       {
         name: "aws-standalone-ec2"
         type: "aws-standalone-ec2"
-        providerRef: {
-          name: parameter.provider
-        }
         properties: {
+            providerRef: {
+              name: parameter.provider
+            }
             name: parameter.name
             environment: parameter.environment
             instance_type: parameter.instance_type
