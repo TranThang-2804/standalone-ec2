@@ -1,3 +1,5 @@
+#provider_aws: string
+
 #parameter: {
     name: string
     envronment: string | *"sit"| "uat" | "prod"
@@ -15,6 +17,10 @@
 }
 
 template: {
+    providerRef: {
+      name: #provider_aws
+    }
+
     components: [
       {
         name: "aws-standalone-ec2"
