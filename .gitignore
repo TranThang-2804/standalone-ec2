@@ -1,0 +1,28 @@
+# editor temporary and backup files
+*#
+*~
+
+# temporary test run directory
+test/simple/**
+
+# .terraform directory
+**/.terraform/*
+# state files
+*.tfstate
+*.tfstate.*
+# crash logs
+crash.log
+crash.*.log
+# variables
+*.tfvars
+*.tfvars.json
+# local overrides
+override.tf
+override.tf.json
+# tfstate lock file
+.terraform.tfstate.lock.info
+# terraform plan output
+tfplan
+# terraform CLI config
+.terraformrc
+terraform.rc
