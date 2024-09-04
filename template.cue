@@ -6,9 +6,10 @@
     // (Required) Name of the EC2 instance
     name: string
     // (Required) The environment you are deploying to
-    environment: string | *"sit"| "uat" | "prod"
+    environment: string
+    environment: *"sit"| "uat" | "prod"
     // (Required) Instance type of the EC2 instance
-    instance_type: string | *"t2.micro" | "t2.nano" | "t2.small" | "t2.medium" | "t2.large" | "t2.xlarge" | "t2.2xlarge"
+    instance_type: *"t2.micro" | "t2.nano" | "t2.small" | "t2.medium" | "t2.large" | "t2.xlarge" | "t2.2xlarge"
 
     // (Required) The AMI ID to use for
     ami_id: string | *"ami-0c55b159cbfafe1f0"
