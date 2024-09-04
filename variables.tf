@@ -28,20 +28,12 @@ variable "create_new_key" {
   description = "Whether to create a new key pair"
   type        = bool
   default     = false
-  validation {
-    condition     = try(var.pubkey, null) == null || var.create_new_key
-    error_message = "create_new_key must be true if a pubkey is provided"
-  }
 }
 
 variable "key_pair_name" {
   description = "Name of existing key pair to use"
   type        = string
   default     = null
-  validation {
-    condition     = !var.create_new_key || try(var.key_pair_name, null) == null
-    error_message = "key_pair_name must not be provided if create_new_key is true"
-  }
 }
 
 variable "pubkey" {
